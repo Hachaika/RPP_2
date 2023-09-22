@@ -83,7 +83,8 @@ def add_auto():
             return jsonify({'error': 'BAD REQUEST'}), 400
 
         cursor.execute(
-            "SELECT rate FROM tax_param WHERE city_id = %s AND from_hp_car <= %s AND to_hp_car >= %s AND from_production_year_car <= %s AND to_production_year_car >= %s",
+            "SELECT rate FROM tax_param WHERE city_id = %s AND from_hp_car <= %s "
+            "AND to_hp_car >= %s AND from_production_year_car <= %s AND to_production_year_car >= %s",
             (existing_city[0], hp_car, hp_car, production_year_car, production_year_car)
         )
         tax_param = cursor.fetchone()
@@ -104,6 +105,7 @@ def add_auto():
         return jsonify({'message': 'Automobile added successfully', 'auto_tax': auto_tax}), 201
     else:
         return jsonify({'error': 'BAD REQUEST'}), 400
+
 
 @app.route('/v1/auto', methods=['GET'])
 def get_auto():
