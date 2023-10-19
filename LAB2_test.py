@@ -3,7 +3,7 @@ import requests
 url = 'http://localhost:5000/v1/add/tax'
 data = {
     'region_code': 'NSK',
-    'tax_rate': 10
+    'tax_rate': 100
 }
 
 response = requests.post(url, json=data)
@@ -31,8 +31,8 @@ print(response.json())
 url = 'http://localhost:5000/v1/fetch/calc'
 params = {
     'region_code': 'NSK',
-    'cadastre_value': 100000,
-    'months_owned': 6
+    'cadastre_value': 1000,
+    'months_owned': 10
 }
 
 response = requests.get(url, params=params)
@@ -43,7 +43,7 @@ print(response.json())
 url = 'http://localhost:5000/v1/update/tax'
 data = {
     'region_code': 'NSK',
-    'tax_rate': 9.0
+    'tax_rate': 19.0
 }
 
 response = requests.post(url, json=data)
