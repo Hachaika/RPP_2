@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Region</title>
+</head>
+<body>
+    <h1>Delete a Region</h1>
+    <form method="POST" action="/web/region/delete">
+        <label for="id">ID of region to delete:</label>
+        <input type="text" name="id" id="id" required>
+        <br>
+        <input type="submit" value="Delete">
+    </form>
+    <div>
+        <h2>Result:</h2>
+        <p>{{ result }}</p>
+    </div>
+</body>
+</html>

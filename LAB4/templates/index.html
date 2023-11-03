@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Tax Calculator</title>
+</head>
+<body>
+    <h1>Car Tax Calculator</h1>
+    <form method="POST" action="/v1/car/tax/calc" enctype="application/x-www-form-urlencoded">
+        <label for="city_id">City ID:</label>
+        <input type="text" name="city_id" id="city_id" required>
+        <br>
+        <label for="horsepower">Horsepower:</label>
+        <input type="text" name="horsepower" id="horsepower" required>
+        <br>
+        <label for="year">Year of Manufacture:</label>
+        <input type="text" name="year" id="year" required>
+        <br>
+        <input type="submit" value="Calculate Tax">
+    </form>
+    <div>
+        <h2>Result:</h2>
+        <strong>{{ result }}</strong>
+    </div>
+</body>
+</html>

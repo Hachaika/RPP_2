@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Car Tax Parameter</title>
+</head>
+<body>
+    <h1>Add Car Tax Parameter</h1>
+    <form method="POST" action="/web/car/tax-param/add" enctype="application/x-www-form-urlencoded">
+        <label for="id">ID:</label>
+        <input type="text" name="id" id="id" required>
+        <br>
+        <label for="city_id">City ID:</label>
+        <input type="text" name="city_id" id="city_id" required>
+        <br>
+        <label for="from_hp_car">Min Horsepower:</label>
+        <input type="text" name="from_hp_car" id="from_hp_car" required>
+        <br>
+        <label for="to_hp_car">Max Horsepower:</label>
+        <input type="text" name="to_hp_car" id="to_hp_car" required>
+        <br>
+        <label for="start_year">Start Year:</label>
+        <input type="text" name="start_year" id="start_year" required>
+        <br>
+        <label for="end_year">End Year:</label>
+        <input type="text" name="end_year" id="end_year" required>
+        <br>
+        <label for="rate">Tax Rate:</label>
+        <input type="text" name="rate" id="rate" required>
+        <br>
+        <input type="submit" value="Add">
+    </form>
+    <div>
+        <h2>Result:</h2>
+        <p>{{ result }}</p>
+    </div>
+</body>
+</html>

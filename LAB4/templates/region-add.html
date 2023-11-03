@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Region</title>
+</head>
+<body>
+    <h1>Add a Region</h1>
+    <form method="POST" action="/web/region/add" enctype="application/x-www-form-urlencoded">
+        <label for="name">Name of region:</label>
+        <input type="text" name="name" id="name" required>
+        <br>
+        <label for="number">Number of region:</label>
+        <input type="text" name="number" id="number" required>
+        <br>
+        <input type="submit" value="Add">
+    </form>
+    <div>
+        <h2>Result:</h2>
+        <p>{{ result }}</p>
+    </div>
+</body>
+</html>

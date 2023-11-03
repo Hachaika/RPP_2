@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Region</title>
+</head>
+<body>
+    <h1>Update a Region</h1>
+    <form method="POST" action="/web/region/update">
+        <label for="id">ID of region to update:</label>
+        <input type="text" name="id" id="id" required>
+        <br>
+        <label for="new_id">New ID for the region:</label>
+        <input type="text" name="new_id" id="new_id" required>
+        <br>
+        <input type="submit" value="Update">
+    </form>
+    <div>
+        <h2>Result:</h2>
+        <p>{{ result }}</p>
+    </div>
+</body>
+</html>
