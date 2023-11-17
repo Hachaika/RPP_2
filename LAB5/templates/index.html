@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Tax Calculator</title>
+</head>
+<body>
+    <h1>Car Tax Calculator</h1>
+        <form method="POST" action="/v1/car/tax/calc">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.city_id.label }} {{ form.city_id(size=20) }}
+        </div>
+        <div class="form-group">
+            {{ form.horsepower.label }} {{ form.horsepower(size=20) }}
+        </div>
+        <div class="form-group">
+            {{ form.year.label }} {{ form.year(size=20) }}
+        </div>
+        <div class="form-group">
+            {{ form.submit() }}
+        </div>
+        </form>
+    <div>
+        <h2>Result:</h2>
+        <strong>{{ result }}</strong>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Car Tax Parameter</title>
+</head>
+<body>
+    <h1>Delete Car Tax Parameter</h1>
+    <form method="POST" action="/web/car/tax-param/delete">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.id.label }}
+            {{ form.id(class="form-control") }}
+        </div>
+        {{ form.submit(class="btn btn-danger") }}
+    </form>
+    <div>
+        <h2>Result:</h2>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li class="alert alert-{{ message.category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>

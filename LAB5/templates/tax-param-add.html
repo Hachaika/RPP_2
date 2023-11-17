@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Car Tax Parameter</title>
+</head>
+<body>
+    <h1>Add Car Tax Parameter</h1>
+    <form method="POST" action="/web/car/tax-param/add">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.id.label }}
+            {{ form.id(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.city_id.label }}
+            {{ form.city_id(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.from_hp_car.label }}
+            {{ form.from_hp_car(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.to_hp_car.label }}
+            {{ form.to_hp_car(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.start_year.label }}
+            {{ form.start_year(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.end_year.label }}
+            {{ form.end_year(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.rate.label }}
+            {{ form.rate(class="form-control") }}
+        </div>
+        {{ form.submit(class="btn btn-primary") }}
+    </form>
+    <div>
+        <h2>Result:</h2>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li class="alert alert-{{ message.category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>

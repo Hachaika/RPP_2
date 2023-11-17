@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Tax Parameters List</title>
+</head>
+<body>
+    <h1>Car Tax Parameters List</h1>
+    <form method="POST" action="/web/car/tax-param/get/all">
+        {{ form.hidden_tag() }}
+        {{ form.submit(class="btn btn-primary") }}
+    </form>
+    <ul>
+        {% for param in car_tax_params %}
+            <li>
+                <strong>ID:</strong> {{ param.id }}<br>
+                <strong>City ID:</strong> {{ param.city_id }}<br>
+                <strong>Min Horsepower:</strong> {{ param.min_horsepower }}<br>
+                <strong>Max Horsepower:</strong> {{ param.max_horsepower }}<br>
+                <strong>Start Year:</strong> {{ param.start_year }}<br>
+                <strong>End Year:</strong> {{ param.end_year }}<br>
+                <strong>Tax Rate:</strong> {{ param.tax_rate }}<br>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

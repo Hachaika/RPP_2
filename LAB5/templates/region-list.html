@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Region List</title>
+</head>
+<body>
+    <h1>List of Regions</h1>
+    <ul>
+        {% for region in regions %}
+            <li>{{ region.name }} - {{ region.id }}</li>
+        {% endfor %}
+    </ul>
+
+    <form method="GET" action="/web/region">
+        {{ form.hidden_tag() }}
+        <button type="submit">Refresh</button>
+    </form>
+</body>
+</html>

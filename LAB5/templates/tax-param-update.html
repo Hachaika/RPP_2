@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Car Tax Parameter</title>
+</head>
+<body>
+    <h1>Update Car Tax Parameter</h1>
+    <form method="POST" action="/web/car/tax-param/update">
+        {{ form.hidden_tag() }}
+        <label for="id">ID:</label>
+        {{ form.id(class="form-control") }}
+        <br>
+        <label for="city_id">City ID:</label>
+        {{ form.city_id(class="form-control") }}
+        <br>
+        <label for="from_hp_car">Min Horsepower:</label>
+        {{ form.from_hp_car(class="form-control") }}
+        <br>
+        <label for="to_hp_car">Max Horsepower:</label>
+        {{ form.to_hp_car(class="form-control") }}
+        <br>
+        <label for="start_year">Start Year:</label>
+        {{ form.start_year(class="form-control") }}
+        <br>
+        <label for="end_year">End Year:</label>
+        {{ form.end_year(class="form-control") }}
+        <br>
+        <label for="rate">Tax Rate:</label>
+        {{ form.rate(class="form-control") }}
+        <br>
+        <input type="submit" value="Update" class="btn btn-primary">
+    </form>
+    <div>
+        <h2>Result:</h2>
+        <p>{{ result }}</p>
+    </div>
+</body>
+</html>

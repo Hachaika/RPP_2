@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Region</title>
+</head>
+<body>
+    <h1>Add a Region</h1>
+    <form method="POST" action="/web/region/add">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.name.label }}
+            {{ form.name(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.number.label }}
+            {{ form.number(class="form-control") }}
+        </div>
+        {{ form.submit(class="btn btn-primary") }}
+    </form>
+    <div>
+        <h2>Result:</h2>
+        <p>{{ result }}</p>
+    </div>
+</body>
+</html>
