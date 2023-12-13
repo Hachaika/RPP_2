@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <header>
+        <h1>ЛАБОРАТОРНАЯ РАБОТА №6</h1>
+    </header>
+
+    <main>
+            <p>Привет, {{ user.name }}!</p>
+            <p>Это основная страница лабораторной работы №6, здесь вы сможете скачать файл с методическими указаниями</p>
+            </p><a href="https://disk.yandex.ru/d/CkyMOdfwrlWr2w" download>Ссылка на скачивание с Я.Диска</a></p>
+            <a href="{{ url_for('users.logout') }}">Выход</a>
+    </main>
+</body>
+</html>
